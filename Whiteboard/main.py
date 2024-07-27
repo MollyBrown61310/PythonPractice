@@ -29,7 +29,9 @@ canvas.bind("<Button-1>")
 canvas.bind("<B1-Motion>")
 
 def color_palete():
-    pass
+    id = colors.create_rectangle((10,10,10,30),fill+"Black")
+
+    color_palete()
 
 
 root.mainloop()
