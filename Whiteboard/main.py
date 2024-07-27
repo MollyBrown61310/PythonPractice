@@ -22,6 +22,9 @@ Button(root,image=eraser,bg="#ffffff",).place(x=30,y=400)
 colors = Canvas(root,bg="#f2f3f5",width=37,height=300,border=10,bd=0)
 colors.place(x=30,y=60)
 
+canvas = Canvas(root,bg="white",width=930,height=500,cursor="hand2")
+canvas.place(x=100,y=10)
+
 
 
 def color_pallete():
