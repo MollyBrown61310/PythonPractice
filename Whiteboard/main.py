@@ -17,5 +17,11 @@ root.iconphoto(False, tk.PhotoImage(file="wb.png"))
 color_box=PhotoImage(file="color section.png")
 Label(root,image=color_box,bg="#f2f3f5").place(x=10,y=20)
 
+eraser=PhotoImage(file="eraser.png")
+Button(root, image=eraser,bg="#f2f3f5").place()
+
+colors=Canvas(root,bg="#ffffff",width=37,height=300,bd=0)
+colors.place(x=30,y=60)
+
 
 root.mainloop()
