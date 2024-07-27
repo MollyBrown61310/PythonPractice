@@ -5,4 +5,15 @@ import tkinter as tk
 from tkinter import filedialog
 import os
 
-root = Tk()
+root=Tk()
+root.title("White Board")
+root.geometry("1050x570+150+50")
+root.config(bg="#f2f3f5")
+root.resizable(False,False)
+
+#icon
+image_icon = PhotoImage(file="wb.png")
+root.iconphoto(False,image_icon)
+
+
+root.mainloop()
