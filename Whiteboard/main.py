@@ -14,10 +14,18 @@ logo = PhotoImage(file="wb.png")
 root.iconphoto(False,logo)
 
 color_panel = PhotoImage(file="color section.png")
-Label(root,image=color_panel,bg="white").place(x=10,y=20)
+Label(root,image=color_panel,bg="#f2f3f5").place(x=10,y=20)
 
 eraser = PhotoImage(file="eraser.png")
-Button(root,image=eraser,bg="white",).place(x=30,y=400)
+Button(root,image=eraser,bg="#ffffff",).place(x=30,y=400)
+
+colors = Canvas(root,bg="#f2f3f5",width=37,height=300,border=10,bd=0)
+colors.place(x=30,y=60)
+
+
+
+def color_pallete():
+    pass
 
 
 
