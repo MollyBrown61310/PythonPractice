@@ -14,10 +14,10 @@ logo = PhotoImage(file="wb.png")
 root.iconphoto(False,logo)
 
 color_panel = PhotoImage(file="color section.png")
-Label(root,image=color_panel,bg='white').place(x=10,y=20)
+Label(root,image=color_panel,bg="white").place(x=10,y=20)
 
 eraser = PhotoImage(file="eraser.png")
-Button(root,image=eraser,bg="white").place(x=30,y=400)
+Button(root,image=eraser,bg="white",).place(x=30,y=400)
 
 
 
