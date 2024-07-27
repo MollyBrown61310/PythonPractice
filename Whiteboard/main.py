@@ -25,14 +25,15 @@ colors.place(x=30,y=60)
 canvas = Canvas(root,bg="white",width=930,height=500,cursor="hand2")
 canvas.place(x=100,y=10)
 
+canvas.bind("<Button-1>")
+canvas.bind("<B1-Motion>")
 
-
-def color_pallete():
+def color_palete():
     pass
 
 
-
 root.mainloop()
-    
+
+
 
 
