@@ -1,4 +1,4 @@
-from tkinter import Tk, Entry, Button , StringVar
+from tkinter import PhotoImage, Tk, Entry, Button , StringVar
 
 class Calculator:
  def __init__(self,master): 
@@ -7,10 +7,13 @@ class Calculator:
      master.config(bg='gray')
      master.resizable(False,False)
 
+     logo = PhotoImage(file="calc.png")
+     root.iconphoto(False,logo)
+
      self.equation=StringVar()
      self.entry_value=''
      self.solve=''
-     Entry(width=17,bg='#ccddff',font=('Arial Bold',28),textvariable=self.equation).place(x=0,y=0)
+     Entry(width=17,bg='lightblue',font=('Arial Bold',28),textvariable=self.equation).place(x=0,y=0)
 
      Button(width=11,height=4,text='(',relief='flat',bg='white',command=lambda:self.show('(')).place(x=0 ,y=50)
      Button(width=11,height=4,text=')',relief='flat',bg='white',command=lambda:self.show(')')).place(x=90 ,y=50)
