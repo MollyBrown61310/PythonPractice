@@ -1,59 +1,21 @@
-from tkinter import PhotoImage, Tk, Entry, Button , StringVar
-
-class Calculator:
- def __init__(self,master): 
-     master.title("Calculator")
-     master.geometry('357x420+0+0')
-     master.config(bg='gray')
-     master.resizable(False,False)
-
-     logo = PhotoImage(file="calc.png")
-     root.iconphoto(False,logo)
-
-     self.equation=StringVar()
-     self.entry_value=''
-     self.solve=''
-     Entry(width=17,bg='lightblue',font=('Arial Bold',28),textvariable=self.equation).place(x=0,y=0)
-
-     Button(width=11,height=4,text='(',relief='flat',bg='white',command=lambda:self.show('(')).place(x=0 ,y=50)
-     Button(width=11,height=4,text=')',relief='flat',bg='white',command=lambda:self.show(')')).place(x=90 ,y=50)
-     Button(width=11,height=4,text='%',relief='flat',bg='white',command=lambda:self.show('%')).place(x=180 ,y=50)
-     Button(width=11,height=4,text='1',relief='flat',bg='white',command=lambda:self.show(1)).place(x=0 ,y=125)
-     Button(width=11,height=4,text='2',relief='flat',bg='white',command=lambda:self.show(2)).place(x=90 ,y=125)     
-     Button(width=11,height=4,text='2',relief='flat',bg='white',command=lambda:self.show(3)).place(x=180 ,y=125)
-     Button(width=11,height=4,text='4',relief='flat',bg='white',command=lambda:self.show(4)).place(x=0 ,y=200)       
-     Button(width=11,height=4,text='5',relief='flat',bg='white',command=lambda:self.show(5)).place(x=90 ,y=200)
-     Button(width=11,height=4,text='6',relief='flat',bg='white',command=lambda:self.show(6)).place(x=180 ,y=200)
-     Button(width=11,height=4,text='7',relief='flat',bg='white',command=lambda:self.show(7)).place(x=0 ,y=275)
-     Button(width=11,height=4,text='8',relief='flat',bg='white',command=lambda:self.show(8)).place(x=180 ,y=275)
-     Button(width=11,height=4,text='9',relief='flat',bg='white',command=lambda:self.show(9)).place(x=90 ,y=275)
-     Button(width=11,height=4,text='0',relief='flat',bg='white',command=lambda:self.show(0)).place(x=90 ,y=350)
-     Button(width=11,height=4,text='.',relief='flat',bg='white',command=lambda:self.show('.')).place(x=180 ,y=350)
-     Button(width=11,height=4,text='+',relief='flat',bg='white',command=lambda:self.show('+')).place(x=270 ,y=275)
-     Button(width=11,height=4,text='-',relief='flat',bg='white',command=lambda:self.show('-')).place(x=270 ,y=200)
-     Button(width=11,height=4,text='/',relief='flat',bg='white',command=lambda:self.show('/')).place(x=270 ,y=50)
-     Button(width=11,height=4,text='x',relief='flat',bg='white',command=lambda:self.show('*')).place(x=270 ,y=125)
-     Button(width=11,height=4,text='=',relief='flat',bg='lightblue',command=self.solve).place(x=270 ,y=350)
-     Button(width=11,height=4,text='C',relief='flat',command=self.clear).place(x=0 ,y=350)
-     
-     
-     
- def show(self,value):
-        self.entry_value+=str(value)
-        self.equation.set(self.entry_value)
-     
- def clear(self):
-        self.entry_value=''
-        self.equation.set(self.entry_value)
-
-def solve(self):
-          result=eval(self.entry_value)
-          self.equation.set(result)
-        
-      
-
+import tkinter
+from tkinter import *
 
 root=Tk()
-calculator=Calculator(root)
+root.title("Calculator")
+root.geometry("570x600+100+200")
+root.resizable(False,False)
+root.configure(bg="#17161b")
+
+logo = PhotoImage(file="calc.png")
+root.iconphoto(False,logo)
+
+
+label_result= Label(root,width=25,height=2,text="",font=("arial",30))
+label_result.pack()
+
 root.mainloop()
+
+
+
  
