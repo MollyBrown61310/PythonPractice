@@ -19,6 +19,17 @@ def clear():
     equation = ""
     label_result.config(text=equation)
 
+def calculate():
+        global equation
+        result = ""
+        if equation !="":
+            try:
+                result= eval(equation)
+            except:
+                result ="error"
+                equation = ""
+        label_result.config(text=result)
+
 logo = PhotoImage(file="calc.png")
 root.iconphoto(False,logo)
 
@@ -47,7 +58,7 @@ Button(root,text="3", width=5, height=1, font=("arial",30,"bold"), bd=1,fg="#fff
 Button(root,text="0", width=11, height=1, font=("arial",30,"bold"), bd=1,fg="#fff",bg="#2a2d36",command=lambda: show("0")).place(x=10,y=500)
 
 Button(root,text=".", width=5, height=1, font=("arial",30,"bold"), bd=1,fg="#fff",bg="#2a2d36",command=lambda: show("1")).place(x=290,y=500)
-Button(root,text="=", width=5, height=3, font=("arial",30,"bold"), bd=1,fg="#fff",bg="#fe9037",command=lambda: show("=")).place(x=430,y=400)
+Button(root,text="=", width=5, height=3, font=("arial",30,"bold"), bd=1,fg="#fff",bg="#fe9037",command=lambda: calculate()).place(x=430,y=400)
 
 root.mainloop()
 
