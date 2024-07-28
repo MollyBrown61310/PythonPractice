@@ -7,7 +7,7 @@ class Calculator:
      master.config(bg='gray')
      master.resizable(False,False)
 
-     self.equation+StringVar()
+     self.equation=StringVar()
      self.entry_value=''
      Entry(width=17,bg='#fff',font=('Arial Bold',28),textvariable=self.equation).place(x=0,y=0)
 
@@ -16,7 +16,17 @@ class Calculator:
         self.equation.set(self.entry_value)
      
      def clear(self):
+        self.entry_value=''
+        self.equation.set(self.entry_value)
 
-      root=Tk()
-      root.mainloop()
+        def solve(self):
+          result=eval(self.entry_value)
+          self.equation.set(result)
+        
+      
+
+
+root=Tk()
+calculator=Calculator(root)
+root.mainloop()
  
