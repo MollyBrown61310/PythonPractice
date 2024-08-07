@@ -9,3 +9,21 @@ def get_gpt_response(user_input):
         "role": "user",
         "content": user_input
     }
+
+    response = openai.chat.completions.create(
+        messages= [message],
+        model= "gpt-3.5-turbo"
+    )
+    return response.choices[0].message.content
+
+def chat():
+    while True:
+        user_input = input("You: ")
+        if user_input == 'exit':
+            print("Chatbot: Goodbye!")
+            break
+        response = get_gpt_response(user_input)
+        print(f"Chatbot: {response}")
+
+if __name__ == "__main__":
+    chat()
